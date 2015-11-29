@@ -8,7 +8,14 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ExampleWatchGraph_WatchKit_App" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ExampleWatchGraph_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView alignment="left" id="WQv-X2-XoU"/>
+                    </items>
+                    <connections>
+                        <outlet property="graphContainerImage" destination="WQv-X2-XoU" id="x3T-eF-CGe"/>
+                    </connections>
+                </controller>
             </objects>
         </scene>
     </scenes>

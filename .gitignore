@@ -1,0 +1,4 @@
+# Ignore local setup
+project.xcworkspace
+xcuserdata
+

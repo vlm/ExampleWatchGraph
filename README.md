@@ -1,6 +1,7 @@
 # About
 
-This Apple Watch App (for WatchOS 2.0) demonstrates use of CoreGraphics.
+This WatchOS 2.0 App demonstrates the use of CoreGraphics
+to draw dynamic graphs on Apple Watch.
 
 ![Graph in Apple Watch emulator](images/watchface-animated.gif)
 

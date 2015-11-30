@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		448B8FDE1C0CA6F90017FC93 /* GraphDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448B8FDD1C0CA6F90017FC93 /* GraphDataStorage.swift */; settings = {ASSET_TAGS = (); }; };
+		448B8FDF1C0CA6F90017FC93 /* GraphDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448B8FDD1C0CA6F90017FC93 /* GraphDataStorage.swift */; settings = {ASSET_TAGS = (); }; };
+		448B8FE11C0CA9F20017FC93 /* GraphPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448B8FE01C0CA9F20017FC93 /* GraphPainter.swift */; settings = {ASSET_TAGS = (); }; };
 		4495B65D1C0BB97100B283F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4495B65C1C0BB97100B283F9 /* AppDelegate.swift */; };
 		4495B65F1C0BB97100B283F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4495B65E1C0BB97100B283F9 /* ViewController.swift */; };
 		4495B6621C0BB97100B283F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4495B6601C0BB97100B283F9 /* Main.storyboard */; };
@@ -72,6 +75,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		448B8FDD1C0CA6F90017FC93 /* GraphDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphDataStorage.swift; sourceTree = "<group>"; };
+		448B8FE01C0CA9F20017FC93 /* GraphPainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphPainter.swift; sourceTree = "<group>"; };
 		4495B6591C0BB97100B283F9 /* ExampleWatchGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleWatchGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4495B65C1C0BB97100B283F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4495B65E1C0BB97100B283F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				4495B68A1C0BB97100B283F9 /* InterfaceController.swift */,
+				448B8FE01C0CA9F20017FC93 /* GraphPainter.swift */,
+				448B8FDD1C0CA6F90017FC93 /* GraphDataStorage.swift */,
 				4495B68C1C0BB97100B283F9 /* ExtensionDelegate.swift */,
 				4495B68E1C0BB97100B283F9 /* Assets.xcassets */,
 				4495B6901C0BB97200B283F9 /* Info.plist */,
@@ -353,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448B8FDE1C0CA6F90017FC93 /* GraphDataStorage.swift in Sources */,
 				4495B6721C0BB97100B283F9 /* ExampleWatchGraphTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +370,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4495B68D1C0BB97100B283F9 /* ExtensionDelegate.swift in Sources */,
+				448B8FDF1C0CA6F90017FC93 /* GraphDataStorage.swift in Sources */,
+				448B8FE11C0CA9F20017FC93 /* GraphPainter.swift in Sources */,
 				4495B68B1C0BB97100B283F9 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,6 +632,7 @@
 				4495B6951C0BB97200B283F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4495B6971C0BB97200B283F9 /* Build configuration list for PBXNativeTarget "ExampleWatchGraph WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -630,6 +641,7 @@
 				4495B6991C0BB97200B283F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4495B69B1C0BB97200B283F9 /* Build configuration list for PBXNativeTarget "ExampleWatchGraph" */ = {
 			isa = XCConfigurationList;
@@ -638,6 +650,7 @@
 				4495B69D1C0BB97200B283F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4495B69E1C0BB97200B283F9 /* Build configuration list for PBXNativeTarget "ExampleWatchGraphTests" */ = {
 			isa = XCConfigurationList;
@@ -646,6 +659,7 @@
 				4495B6A01C0BB97200B283F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

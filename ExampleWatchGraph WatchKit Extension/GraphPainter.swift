@@ -64,14 +64,14 @@ class GraphPainter : NSObject {
     private func initAxisLineContext(context: CGContextRef, color: UIColor) {
         // Setup for the thin underline appearance
         CGContextSetShouldAntialias(context, false)
-        CGContextSetLineWidth(context, 1.0)
+        CGContextSetLineWidth(context, 1/scale) // Exactly 1 device pixel.
         CGContextSetStrokeColorWithColor(context, color.CGColor)
     }
     
     private func initGraphLineContext(context: CGContextRef, color: UIColor) {
         // Setup for the graph path appearance
         CGContextSetShouldAntialias(context, true)
-        CGContextSetLineWidth(context, scale * 2.0)
+        CGContextSetLineWidth(context, 2.0)
         CGContextSetLineJoin(context, CGLineJoin.Round)
         CGContextSetLineCap(context, CGLineCap.Round)
         CGContextSetStrokeColorWithColor(context, color.CGColor)
@@ -81,7 +81,7 @@ class GraphPainter : NSObject {
      * Redraw the full scene.
      */
     func drawTimerFired() {
-        UIGraphicsBeginImageContext(imgSize)
+        UIGraphicsBeginImageContextWithOptions(imgSize, true, scale)
         let context = UIGraphicsGetCurrentContext()!
         
         let curTS = NSDate.timeIntervalSinceReferenceDate()
@@ -113,15 +113,11 @@ class GraphPainter : NSObject {
             }
         }
         CGContextStrokePath(context);
-        
+
         // Save the image to PNG, then load it back as
         // a UIImage object.
-        let cimg = CGBitmapContextCreateImage(context);
-        let uimg = UIImage(CGImage: cimg!)
-        // End the graphics context
+        let uimg = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
-        // Show graph data on the Watch interface
         graphImage.setImage(uimg)
     }
     

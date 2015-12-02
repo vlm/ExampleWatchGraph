@@ -29,7 +29,7 @@ class InterfaceController: WKInterfaceController {
 
         // Start drawing dynamic graph
         painter = GraphPainter(fromImage: graphContainerImage,
-                               imageSize: upscaleToDevice(computeGraphSize()),
+                               imageSize: computeGraphSize(),
                                interfaceScale: interfaceScaleFactor())
         painter!.start()
     }
@@ -67,13 +67,10 @@ class InterfaceController: WKInterfaceController {
      * to create a high resolution graph, the underlying image should
      * be created in a device resolution. When we manipulate
      * the graph image data (rather than UI Labels and Images),
-     * we use a much bigger canvas. Expected scale-up factor: 2.0.
+     * we use a much bigger canvas, though it is still addressable
+     * using large logical pixels.
+     * Expected scale-up factor: 2.0.
      */
-    private func upscaleToDevice(sz: CGSize) -> CGSize {
-        let scale = interfaceScaleFactor()   // Expected value: 2.0
-        return CGSize(width: scale * sz.width, height: scale * sz.height)
-    }
-    
     private func interfaceScaleFactor() -> CGFloat {
         let currentDevice = WKInterfaceDevice.currentDevice()
         return currentDevice.screenScale   // Expected value: 2.0

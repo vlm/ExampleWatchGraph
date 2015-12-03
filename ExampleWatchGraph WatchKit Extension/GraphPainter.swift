@@ -114,8 +114,9 @@ class GraphPainter : NSObject {
         }
         CGContextStrokePath(context);
 
-        // Save the image to PNG, then load it back as
-        // a UIImage object.
+        // Capture the image data as UIImage,
+        // then display it back on a image element
+        // (invokes conversion to and from PNG).
         let uimg = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         graphImage.setImage(uimg)

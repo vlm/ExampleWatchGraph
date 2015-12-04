@@ -117,6 +117,8 @@ class GraphPainter : NSObject {
         // Capture the image data as UIImage,
         // then display it back on a image element
         // (invokes conversion to and from PNG).
+        // See https://www.youtube.com/watch?v=ue7QScZz8WM for
+        // a PNG related trace.
         let uimg = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         graphImage.setImage(uimg)
